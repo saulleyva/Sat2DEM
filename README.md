@@ -1,6 +1,8 @@
-# Sat2DEM: Digital Elevation Model Generation from Satellite Imagery
+# Sat2DEM: Satellite-Based Digital Elevation Model Generation Using Attention Mechanisms and Gradient-Based Loss Optimizations
 
-Sat2DEM is a deep learning framework for generating Digital Elevation Models (DEMs) from satellite imagery. This project integrates advanced attention mechanisms and novel normalization strategies to improve DEM generation performance. **The code in this repository** was initially developed as part of a master’s thesis (TFM), but it is designed to be easily extended or adapted for research and application in geospatial analysis.
+## Introduction
+
+Sat2DEM is a deep learning framework for generating Digital Elevation Models (DEMs) from satellite imagery. The code in this repository was developed as part of the research presented in the paper: *"Satellite-Based Digital Elevation Model Generation Using Attention Mechanisms and Gradient-Based Loss Optimizations"* by Leyva, Ortega, and Moura (2024). It is designed to be easily extended or adapted for research and applications in geospatial analysis.
 
 ---
 
@@ -10,27 +12,6 @@ Sat2DEM is a deep learning framework for generating Digital Elevation Models (DE
 - **Normalization strategies**: Explores Global Normalization and Global Normalization with Shift for focused terrain modeling.  
 - **Publicly available dataset**: Pairs Sentinel-2 and Landsat 9 imagery with Copernicus DEM GLO-30 for the Iberian Peninsula.  
 - **Scalability**: Offers a cost-effective and efficient alternative to traditional DEM generation methods, such as LiDAR and radar.
-
-
----
-
-## Dataset
-### Description
-The dataset includes:
-- **Satellite imagery**: Harmonized Sentinel-2 (10m resolution) and USGS Landsat 9 (30m resolution).  
-- **DEM data**: Copernicus DEM GLO-30 with elevation values ranging from -168.62 m (Las Cruces mine, Seville) to 3472.30 m (Sierra Nevada, Granada).  
-- **Image tiles**: 256×256 pixels, each covering ~7.68×7.68 km.  
-- **Train/val/test splits**: Split in a 70/15/15 ratio. Configurations are provided in `data/dataset_splits.json`.
-
-**Download**: The full dataset is publicly available on Zenodo:  
-[https://doi.org/10.5281/zenodo.14647632](https://doi.org/10.5281/zenodo.14647632)
-
-### Preprocessing
-
-- **DEM normalization**  
-  - *Global Normalization*: Maps elevation to `[-1, 1]` based on the dataset-wide min/max values.  
-  - *Global Normalization with Shift*: Focuses on local terrain by setting each tile’s minimum to -1.  
-- **Cloud artifact removal**: Uses a median operation to reduce interference caused by clouds.  
 
 ---
 
@@ -50,6 +31,26 @@ The dataset includes:
    ```bash
    pip install -r requirements.txt
    ```
+
+---
+
+## Dataset
+### Description
+The dataset includes:
+- **Satellite imagery**: Harmonized Sentinel-2 (10m resolution) and USGS Landsat 9 (30m resolution).  
+- **DEM data**: Copernicus DEM GLO-30 with elevation values ranging from -168.62 m (Las Cruces mine, Seville) to 3472.30 m (Sierra Nevada, Granada).  
+- **Image tiles**: 10,237 tiles of 256×256 pixels each, covering approximately 7.68×7.68 km per tile.
+- **Train/val/test splits**: Split in a 70/15/15 ratio. Configurations are provided in `data/dataset_splits.json`.
+
+**Download**: The full dataset is publicly available [here](https://doi.org/10.5281/zenodo.14647632).
+
+
+### Preprocessing
+
+- **DEM normalization**  
+  - *Global Normalization*: Maps elevation to `[-1, 1]` based on the dataset-wide min/max values.  
+  - *Global Normalization with Shift*: Focuses on local terrain by setting each tile’s minimum to -1.  
+- **Cloud artifact removal**: Uses a median operation to reduce interference caused by clouds.  
 
 ---
 
@@ -76,27 +77,38 @@ Sat2DEM/
 ├── main_drpan.py             # DRPAN training and testing script
 ├── test.py                   # Model evaluation
 ├── utils.py                  # Utility functions
-├── requirements.txt          # Python dependencies
-└── README.md                 # Project documentation
+└── requirements.txt          # Python dependencies
 ```
+
+---
+
+## Configuration Parameters
+
+The scripts allow customization of parameters to adapt the model to different datasets or experimental setups. These can be found at the beginning of each main script (e.g., `main_pix2pix.py`). Below are some commonly modified parameters:
+
+- **EXPERIMENT_NAME**: Define the name of the experiment for organizing results.
+- **NUM_EPOCHS**: Number of training epochs (default: 500).
+- **BATCH_SIZE**: Batch size for training (default: 32).
+- **LEARNING_RATE**: Initial learning rate for optimization (default: 2e-4).
+- **ATT**: Attention mechanism used (`cbam`, `gam`, `simam`, or `None`).
 
 ---
 
 ## Usage
 ### Training and testing
-To train the Pix2Pix model:
+To train and test the Pix2Pix model:
 ```bash
 python main_pix2pix.py
 ```
 
 ### Testing a given configuration
-Evaluate a trained model:
+Evaluate a trained configuration:
 ```bash
 python test.py
 ```
 
 ---
 
-## Results
-- **Best configuration**: Pix2Pix with GAM and Global Normalization with Shift achieved a Mean Absolute Error (MAE) of 65m and a Structural Similarity Index (SSIM) of 0.85.
-- Detailed metrics are saved in the `metrics/` directory.
+## Citation
+
+If you use this repository, please cite the corresponding publication
