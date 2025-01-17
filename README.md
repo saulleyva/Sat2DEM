@@ -9,7 +9,6 @@ Sat2DEM is a deep learning framework for generating Digital Elevation Models (DE
 - **Advanced attention mechanisms**: Incorporates CBAM, GAM, and SimAM to enhance spatial and channel attention.  
 - **Normalization strategies**: Explores Global Normalization and Global Normalization with Shift for focused terrain modeling.  
 - **Publicly available dataset**: Pairs Sentinel-2 and Landsat 9 imagery with Copernicus DEM GLO-30 for the Iberian Peninsula.  
-  - **Get it here**: [https://doi.org/10.5281/zenodo.14647632](https://doi.org/10.5281/zenodo.14647632)  
 - **Scalability**: Offers a cost-effective and efficient alternative to traditional DEM generation methods, such as LiDAR and radar.
 
 
@@ -21,7 +20,10 @@ The dataset includes:
 - **Satellite imagery**: Harmonized Sentinel-2 (10m resolution) and USGS Landsat 9 (30m resolution).  
 - **DEM data**: Copernicus DEM GLO-30 with elevation values ranging from -168.62 m (Las Cruces mine, Seville) to 3472.30 m (Sierra Nevada, Granada).  
 - **Image tiles**: 256×256 pixels, each covering ~7.68×7.68 km.  
-- **Train/val/test splits**: Split in a 70/15/15 ratio. Configurations are provided in `data/dataset_splits.json`.  
+- **Train/val/test splits**: Split in a 70/15/15 ratio. Configurations are provided in `data/dataset_splits.json`.
+
+**Download**: The full dataset is publicly available on Zenodo:  
+[https://doi.org/10.5281/zenodo.14647632](https://doi.org/10.5281/zenodo.14647632)
 
 ### Preprocessing
 
