@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Sat2DEM is a deep learning framework for generating Digital Elevation Models (DEMs) from satellite imagery. The code in this repository was developed as part of the research presented in the paper: *"Satellite-Based Digital Elevation Model Generation Using Attention Mechanisms and Gradient-Based Loss Optimizations"* by Leyva, Ortega, and Moura (2024). It is designed to be easily extended or adapted for research and applications in geospatial analysis.
+Sat2DEM is a deep learning framework for generating Digital Elevation Models (DEMs) from satellite imagery. The code in this repository was developed as part of the research presented in the paper: *"Satellite-Based Digital Elevation Model Generation Using Attention Mechanisms and Gradient-Based Loss Optimizations"* by S. Leyva, M. Ortega, J. de Moura. It is designed to be easily extended or adapted for research and applications in geospatial analysis.
 
 ---
 
@@ -111,4 +111,4 @@ python test.py
 
 ## Citation
 
-If you use this repository, please cite the corresponding publication
+S. Leyva, M. Ortega, J. de Moura, "Satellite-Based Digital Elevation Model Generation Using Attention Mechanisms and Gradient-Based Loss Optimizations", IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2025. (pending of acceptation).
