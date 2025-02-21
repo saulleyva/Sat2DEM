@@ -56,28 +56,28 @@ The dataset includes:
 
 ## Repository Structure
 ```plaintext
-Sat2DEM/
-├── data/
-│   └── dataset_splits.json   # Train/val/test configurations
-├── loss/
-│   └── loss.py               # Loss function
-├── models/
-│   ├── discriminator.py      # PatchGAN discriminator
-│   ├── drpnet.py             # Discriminative Region Proposal Network
-│   ├── generator.py          # UNet generator
-│   ├── reviser.py            # DRPAN reviser module
-│   └── attention/            # Attention mechanisms (CBAM, GAM, SimAM)
-├── scripts/
-│   ├── create_splits.py      # Data split creation
-│   ├── normalize_dem.py      # DEM normalization
-│   ├── generate_figures.py   # Learning curve visualization
-│   └── replace_null_val.py   # Handling missing DEM values
-├── main_pix2pix.py           # Pix2Pix training and testing script
-├── main_unet.py              # UNet training and testing script
-├── main_drpan.py             # DRPAN training and testing script
-├── test.py                   # Model evaluation
-├── utils.py                  # Utility functions
-└── requirements.txt          # Python dependencies
+📂 Sat2DEM/
+├── 📂 data/
+│   └── 📄 dataset_splits.json   # Train/val/test configurations
+├── 📂 loss/
+│   └── 📄 loss.py               # Loss function
+├── 📂 models/
+│   ├── 📄 discriminator.py      # PatchGAN discriminator
+│   ├── 📄 drpnet.py             # Discriminative Region Proposal Network
+│   ├── 📄 generator.py          # UNet generator
+│   ├── 📄 reviser.py            # DRPAN reviser module
+│   └── 📂 attention/            # Attention mechanisms (CBAM, GAM, SimAM)
+├── 📂 scripts/
+│   ├── 📄 create_splits.py      # Data split creation
+│   ├── 📄 normalize_dem.py      # DEM normalization
+│   ├── 📄 generate_figures.py   # Learning curve visualization
+│   └── 📄 replace_null_val.py   # Handling missing DEM values
+├── 📄 main_pix2pix.py           # Pix2Pix training and testing script
+├── 📄 main_unet.py              # UNet training and testing script
+├── 📄 main_drpan.py             # DRPAN training and testing script
+├── 📄 test.py                   # Model evaluation
+├── 📄 utils.py                  # Utility functions
+└── 📄 requirements.txt          # Python dependencies
 ```
 
 ---
