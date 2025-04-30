@@ -113,3 +113,11 @@ python test.py
 ## Citation
 
 S. Leyva, M. Ortega, J. de Moura, "Satellite-Based Digital Elevation Model Generation Using Attention Mechanisms and Gradient-Based Loss Optimizations", IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2025. (pending of acceptation).
+
+---
+
+## Contact
+
+Feel free to reach out:
+
+Email: [saul.leyva.santaren@udc.es](mailto:saul.leyva.santaren@udc.es)  
