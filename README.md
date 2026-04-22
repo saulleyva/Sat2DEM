@@ -1,8 +1,8 @@
-# Sat2DEM: Satellite-Based Digital Elevation Model Generation Using Attention Mechanisms and Gradient-Based Loss Optimizations
+# Sat2DEM: Deep Learning Approaches to DEM Generation: Attention Mechanisms and Gradient-Based Loss Function
 
 ## Introduction
 
-Sat2DEM is a deep learning framework for generating Digital Elevation Models (DEMs) from satellite imagery. The code in this repository was developed as part of the research presented in the paper: *"Satellite-Based Digital Elevation Model Generation Using Attention Mechanisms and Gradient-Based Loss Optimizations"* by S. Leyva, M. Ortega, J. de Moura. It is designed to be easily extended or adapted for research and applications in geospatial analysis.
+Sat2DEM is a deep learning framework for generating Digital Elevation Models (DEMs) from satellite imagery. The code in this repository was developed as part of the research presented in the paper: *"Deep Learning Approaches to DEM Generation: Attention Mechanisms and Gradient-Based Loss Function"* by S. Leyva, M. Ortega, J. de Moura. It is designed to be easily extended or adapted for research and applications in geospatial analysis.
 
 ---
 
@@ -112,7 +112,7 @@ python test.py
 
 ## Citation
 
-S. Leyva, M. Ortega, J. de Moura, "Satellite-Based Digital Elevation Model Generation Using Attention Mechanisms and Gradient-Based Loss Optimizations", IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2025. (pending of acceptation).
+S. Leyva, M. Ortega, J. de Moura, " Deep Learning Approaches to DEM Generation: Attention Mechanisms and Gradient-Based Loss Function ", PFG – Journal of Photogrammetry, Remote Sensing and Geoinformation Science, 2026. DOI : 10.1007/s41064-026-00393-y
 
 ---
 
